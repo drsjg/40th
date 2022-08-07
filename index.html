@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PARTY TIME!!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {font-family: 'Comic Neue', cursive;}
+</style>  
+</head>
+  <body>
+
+    <div id="display">
+
+    <audio id="win95start" src="win95.mp3"></audio>
+    <audio id="dialup" src="dialup.mp3"></audio>
+
+        <button id="startbtn">START</button>
+
+    <div id="start" style="display:none">
+        <img src="img/ie.png" id="connectbtn" />
+    </div>
+
+    <div id="connecting" style="display:none">
+        <img style="display:block; margin: auto" src="img/200.gif" />
+    </div>
+
+    <div id="content" style="display:none">
+
+        <div id="title">
+            <h1>IT'S PARTY TIME!!!</h1>
+
+                <marquee width="60%" direction="right" height="200px">
+                    <h1>We hope you can come.</h1>
+                    </marquee>
+                
+        </div>
+
+        <p>It's our 40th this year so we'd like to a have a little celebration.</p>
+        <p>Nothing special but a few people over for a night of nostalgia and a few drinks.</p>
+        <p>We're going back to our teens so would like a 90s theme.</p>
+
+        <h2>Click below to email us to let us know you can come!</h2>
+
+        <img src="img/uc1.gif" />
+        <a href="mailto:samandstew40th@gmail.com"><img src="img/email1.webp" /></a>
+
+    </div>
+
+</div>
+
+    <script>
+
+        document.getElementById('startbtn').onclick = function(){startPc()};
+        
+
+        function startPc() {
+            document.getElementById('startbtn').style.display='none';
+            document.body.style.backgroundImage = "url('img/monitor2.png')";
+            document.getElementById('win95start').play();
+            setTimeout(() => {
+                document.getElementById('start').style.display='block';
+            }, 5000)
+        }
+            
+            document.getElementById('connectbtn').onclick = function(){connectPage()};
+
+            function connectPage() {
+                document.getElementById('connecting').style.display='block';                
+                document.getElementById('dialup').play();
+                document.getElementById('start').style.display='none';
+
+                setTimeout(() => {
+                        document.body.style.backgroundImage = "url('img/monitor3.png')";
+                        var colors = ['#ff0000', '#00ff00', '#0000ff'];
+                        var random_color = colors[Math.floor(Math.random() * colors.length)];
+                        document.getElementById('title').style.color = random_color;
+                            setTimeout(() => {
+                                var connectingimg = document.getElementById('connecting');
+                                var content = document.getElementById('content');
+                                connectingimg.style.display = 'none';
+                                content.style.display = 'block';
+                                var head  = document.getElementsByTagName('head')[0];
+                                var link  = document.createElement('link');
+                                link.rel  = 'stylesheet';
+                                link.type = 'text/css';
+                                link.href = 'css/style.css';
+                                link.media = 'all';
+                                head.appendChild(link);
+              }, 500);   
+                          }, 26000);        
+            }
+        
+    </script>
+
+
+
+</body>
+</html>

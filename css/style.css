@@ -1,0 +1,34 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url('../img/monitor.png');
+    background-size: 1024px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: red;
+    text-align: center;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+#display {
+    overflow: scroll;
+    width: 740px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 4em;
+}
