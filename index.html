@@ -15,8 +15,6 @@
 </head>
   <body>
 
-    <div id="display">
-
     <audio id="win95start" src="win95.mp3"></audio>
     <audio id="dialup" src="dialup.mp3"></audio>
 
@@ -35,6 +33,9 @@
         <div id="title">
             <h1>IT'S PARTY TIME!!!</h1>
 
+            <h2>17th September</h2>
+            <h1 class="blink_text">AT OUR HOUSE!!!!!</h1>
+
                 <marquee width="60%" direction="right" height="200px">
                     <h1>We hope you can come.</h1>
                     </marquee>
@@ -42,8 +43,8 @@
         </div>
 
         <p>It's our 40th this year so we'd like to a have a little celebration.</p>
-        <p>Nothing special but a few people over for a night of nostalgia and a few drinks.</p>
-        <p>We're going back to our teens so would like a 90s theme.</p>
+        <p>Nothing special but a few people over for a few drinks.</p>
+        <p>We're going back to our teens so full on 90s - curtains, eyeliner, flannel shirts etc. etc.</p>
 
         <h2>Click below to email us to let us know you can come!</h2>
 
@@ -52,7 +53,6 @@
 
     </div>
 
-</div>
 
     <script>
 
@@ -61,7 +61,7 @@
 
         function startPc() {
             document.getElementById('startbtn').style.display='none';
-            document.body.style.backgroundImage = "url('img/monitor2.png')";
+            document.body.style.backgroundImage = "url('img/win95.jpg')";
             document.getElementById('win95start').play();
             setTimeout(() => {
                 document.getElementById('start').style.display='block';
@@ -76,11 +76,8 @@
                 document.getElementById('start').style.display='none';
 
                 setTimeout(() => {
-                        document.body.style.backgroundImage = "url('img/monitor3.png')";
-                        var colors = ['#ff0000', '#00ff00', '#0000ff'];
-                        var random_color = colors[Math.floor(Math.random() * colors.length)];
-                        document.getElementById('title').style.color = random_color;
-                            setTimeout(() => {
+                    document.body.style.backgroundImage = "url('img/bg.gif')";
+                             setTimeout(() => {
                                 var connectingimg = document.getElementById('connecting');
                                 var content = document.getElementById('content');
                                 connectingimg.style.display = 'none';
@@ -93,7 +90,7 @@
                                 link.media = 'all';
                                 head.appendChild(link);
               }, 500);   
-                          }, 10000);        
+                          }, 500);        
             }
         
     </script>

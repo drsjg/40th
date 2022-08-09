@@ -3,11 +3,8 @@
 }
 
 body {
-    background-image: url('../img/monitor.png');
-    background-size: 1024px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: black;
+    background-repeat: repeat;
     color: red;
     text-align: center;
 }
@@ -18,17 +15,37 @@ body {
     text-align: left;
 }
 
-#display {
-    overflow: scroll;
-    width: 740px;
-    height: 540px;
-    position: absolute;
-    left: 50%;
-    top: 44%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+
 
 h1 {
     font-size: 4em;
 }
+
+.blink_text
+{
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+    color: red;
+}
+
+@-moz-keyframes blinker
+{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker
+{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker
+{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+ }
